@@ -1,19 +1,21 @@
 # This file contains metadata for your plugin.
 
-# This file should be included when you package your plugin.# Mandatory items:
+# This file should be included when you package your plugin.
+
+# Mandatory items:
 
 [general]
-name=Instituto para la Resiliencia ante Desastres
+name=PDD-QGis Tool
 qgisMinimumVersion=3.0
-description=Descarga de datos
+description=Tool to download and visualize datasets from Plataforma de Datos by Itrend.
+about=This plugin allows to connect to plataformadedatos.cl through credentials and private access keys for each registered user to download and visualize the different datasets with georeferenced information. This tool supports datasets referenced by points, lines, multilines, polygons, multipolygons, etc.
 version=1.0.0
 author=Sebastián Castro
 email=plataformadedatos@itrend.cl
 
-about=Descarga y visualización de datos
-
-tracker=http://bugs
-repository=http://repo
+homepage=https://github.com/ItrendCL/pdd-qgis-plugin
+tracker=https://github.com/ItrendCL/pdd-qgis-plugin/issues
+repository=https://github.com/ItrendCL/pdd-qgis-plugin
 # End of mandatory metadata
 
 # Recommended items:
@@ -23,10 +25,8 @@ hasProcessingProvider=no
 # changelog=
 
 # Tags are comma separated with spaces allowed
-tags=python
+tags=python, datasets, risk, hazard, visualization, analitics, Chile 
 
-homepage=http://homepage
-category=Plugins
 icon=icon.png
 # experimental flag
 experimental=False
@@ -39,8 +39,8 @@ deprecated=False
 # Check the documentation for more information.
 # plugin_dependencies=
 
-Category of the plugin: Raster, Vector, Database or Web
-# category=
+# Category of the plugin: Raster, Vector, Database or Web
+category=Vector
 
 # If the plugin can run on QGIS Server.
 server=False
