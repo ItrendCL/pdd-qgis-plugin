@@ -24,10 +24,13 @@ jobs:
       - name: Copy Licence
         run: |
           cp LICENSE ./src/LICENSE
+      - name: Rename folder
+        run: |
+          mv src pdd-qgis-plugin
       - name: ZIP plugin
         uses: montudor/action-zip@v1
         with:
-          args: zip -qq -r pdd-qgis-plugin.zip src
+          args: zip -qq -r pdd-qgis-plugin.zip pdd-qgis-plugin
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
