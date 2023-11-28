@@ -5,7 +5,7 @@ Este plugin permite descargar y cargar los conjuntos de datos de la [Plataforma 
 <img src="logo.svg" width="400px" height="auto">
 
 - **Autor**: [Sebastián Castro](https://github.com/sebacastroh)
-- **Version**: 1.1.0
+- **Version**: 1.1.1
 - **Fecha**: 28 de noviembre de 2023
 
 # Descarga
