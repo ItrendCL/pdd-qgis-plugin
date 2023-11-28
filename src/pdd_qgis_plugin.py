@@ -33,14 +33,17 @@ from .pdd_qgis_plugin_dialog import PDDQgisPluginDialog
 from .table_dialog import TableDialog
 from .QCustom import QCustomTableModel
 from .credentials_dialog import CredentialsDialog
+from .check_version_dialog import CheckVersionDialog
 
 import os
 import json
 import urllib
 import zipfile
 import requests
+import configparser
 import pandas as pd
 from .pddUtils import normalizeString
+from packaging.version import Version, parse
 from qgis.core import QgsMessageLog, QgsVectorLayer, QgsRasterLayer, QgsProject
 
 class PDDQgisPlugin:
@@ -90,6 +93,13 @@ class PDDQgisPlugin:
         self.baseFolder = QSettings().value('pdd-qgis-plugin/baseFolder')
         self.params = None
         self.forceDownload = False
+
+        config = configparser.ConfigParser()
+        config.read(os.path.join(os.path.dirname(__file__),'metadata.txt'))
+
+        self.version     = Version(config.get('general', 'version'))
+        self.githubApi   = 'https://api.github.com/repos/ItrendCL/pdd-qgis-plugin/releases/latest'
+        self.new_version = False
 
     # noinspection PyMethodMayBeStatic
     def tr(self, message):
@@ -547,6 +557,20 @@ class PDDQgisPlugin:
         # Only create GUI ONCE in callback, so that it will only load when the plugin is started
         if self.first_start == True:
             self.first_start = False
+
+            response = requests.get(self.githubApi)
+            if response.status_code == 200:
+                latest_version = response.json().get('tag_name')
+                if latest_version.startswith('v'):
+                    latest_version = latest_version[1:].strip()
+                latest_version = Version(latest_version)
+
+                if self.version < latest_version:
+                   self.new_version = True
+
+            if self.new_version:
+                self.update = CheckVersionDialog(version=latest_version)
+
             self.dlg = PDDQgisPluginDialog()
             if self.categories is None:
                 self.categories = self.getCategories()
@@ -600,6 +624,10 @@ class PDDQgisPlugin:
         
         # show the dialog
         self.dlg.show()
+        
+        if self.new_version:
+            self.update.show()
+        
         # Run the dialog event loop
         result = self.dlg.exec_()
         # See if OK was pressed
