@@ -10,7 +10,7 @@ Este plugin permite descargar y cargar los conjuntos de datos de la [Plataforma 
 
 # Descarga
 
-Puedes descargar la última versión estable [aquí](https://github.com/ItrendCL/pdd-qgis-plugin/releases/download/v1.1.0/pdd-qgis-plugin.zip). Otras versiones de desarrollo están publicadas en la sección ```Releases```.
+Puedes descargar la última versión estable [aquí](https://github.com/ItrendCL/pdd-qgis-plugin/releases/download/v1.1.1/pdd-qgis-plugin.zip). Otras versiones de desarrollo están publicadas en la sección ```Releases```.
 
 # Instalación
 
