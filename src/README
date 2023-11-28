@@ -1,0 +1,5 @@
+# PDD-QGIS Tool
+
+Tool to download and visualize datasets from Plataforma de Datos by Itrend (www.plataformadedatos.cl).
+
+This plugin allows to connect to plataformadedatos.cl through credentials and private access keys for each registered user to download and visualize the different datasets with georeferenced information. This tool supports datasets referenced by points, lines, multilines, polygons, multipolygons, etc.
