@@ -14,6 +14,12 @@ Puedes descargar la última versión estable [aquí](https://plugins.qgis.org/pl
 
 # Instalación
 
+## Instalación desde el repositorio oficial de QGIS
+
+1. En el menú superior de QGIS, abre la sección ```Complementos > Administrar e instalar complementos ...```
+2. En la sección ```Todos``` utiliza el buscador y filtra con la palabra ```Itrend```
+3. Selecciona el complemento y haz clic en instalar
+
 ## Instalación directa a través de un zip
 
 1. Descarga la versión más actual del plugin disponible arriba o en la sección ```Releases``` de GitHub ubicada a la derecha del sitio
