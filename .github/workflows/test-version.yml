@@ -11,8 +11,9 @@ jobs:
   test-version:
     runs-on: ubuntu-latest
     steps:
-      - name: Get version to be published according to dev
+      - name: Checkout
         uses: actions/checkout@v4
+      -name: Get version
         id: vars
         with:
           ref: dev
