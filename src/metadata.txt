@@ -9,7 +9,7 @@ name=PDD-QGis Tool
 qgisMinimumVersion=3.0
 description=Tool to download and visualize datasets from Plataforma de Datos by Itrend.
 about=This plugin allows to connect to plataformadedatos.cl through credentials and private access keys for each registered user to download and visualize the different datasets with georeferenced information. This tool supports datasets referenced by points, lines, multilines, polygons, multipolygons, etc.
-version=1.1.1
+version=1.1.2
 author=Sebastián Castro
 email=plataformadedatos@itrend.cl
 
