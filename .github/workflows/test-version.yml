@@ -1,5 +1,4 @@
 name: Test plugin version
-description: "It checks if the version that will be published is the same that in the metadata"
 
 on:
   pull_request:
