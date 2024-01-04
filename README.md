@@ -5,12 +5,12 @@ Este plugin permite descargar y cargar los conjuntos de datos de la [Plataforma 
 <img src="logo.svg" width="400px" height="auto">
 
 - **Autor**: [Sebastián Castro](https://github.com/sebacastroh)
-- **Version**: 1.1.1
+- **Version**: 1.1.2
 - **Fecha**: 28 de noviembre de 2023
 
 # Descarga
 
-Puedes descargar la última versión estable [aquí](https://plugins.qgis.org/plugins/pdd-qgis-plugin/version/1.1.1/download/). Otras versiones de desarrollo están publicadas en la sección ```Releases```.
+Puedes descargar la última versión estable [aquí](https://plugins.qgis.org/plugins/pdd-qgis-plugin/version/1.1.2/download/). Otras versiones de desarrollo están publicadas en la sección ```Releases```.
 
 # Instalación
 
