@@ -19,7 +19,7 @@ jobs:
       - name: Get version
         id: vars
         run: |
-          tag="$(git describe --tags)"
+          tag="$(git describe --tags | cut -d "-" -f 1 | cut -d "v" -f 2)"
           echo "tag=$tag" >> $GITHUB_OUTPUT
       - name: Check output
         env:
