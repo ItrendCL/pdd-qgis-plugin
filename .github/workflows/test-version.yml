@@ -1,0 +1,25 @@
+name: Test plugin version
+description: "It checks if the version that will be published is the same that in the metadata"
+
+on:
+  pull_request:
+    branches:
+      - dev
+      - main
+
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Get version to be published according to dev
+      uses: actions/checkout@v4
+      id: vars
+      with:
+        ref: dev
+      run: echo "tag=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
+
+    - name: Check output
+        env:
+          RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
+        run: |
+          echo $RELEASE_VERSION
+          echo ${{ steps.vars.outputs.tag }}
