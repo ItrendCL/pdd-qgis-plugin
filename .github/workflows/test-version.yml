@@ -23,5 +23,5 @@ jobs:
           echo "tag=$tag" >> $GITHUB_OUTPUT
       - name: Check version in README.md
         run: |
-          inREADME=$(grep "\- \*\*Version\*\*: ${{ steps.vars.outputs.tag }}" README.md | wc -l)
-          if [ "$inREADME" = "0" ]; then exit 1; fi
+          valid=$(grep "\- \*\*Version\*\*: ${{ steps.vars.outputs.tag }}" README.md | wc -l)
+          if [ "$valid" = "0" ]; then exit 1; fi
