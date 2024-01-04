@@ -3,7 +3,6 @@ name: Test plugin version
 on:
   pull_request:
     branches:
-      - dev
       - main
 
 jobs:
@@ -24,4 +23,12 @@ jobs:
       - name: Check version in README.md
         run: |
           valid=$(grep "\- \*\*Version\*\*: ${{ steps.vars.outputs.tag }}" README.md | wc -l)
+          if [ "$valid" = "0" ]; then exit 1; fi
+      - name: Check version in url
+        run: |
+          valid=$(grep "https://plugins.qgis.org/plugins/pdd-qgis-plugin/version/${{ steps.vars.outputs.tag }}/download/" README.md | wc -l)
+          if [ "$valid" = "0" ]; then exit 1; fi
+      - name: Check version in metadata
+        run: |
+          valid=$(grep "version=${{ steps.vars.outputs.tag }}" src/metadata.txt | wc -l)
           if [ "$valid" = "0" ]; then exit 1; fi
