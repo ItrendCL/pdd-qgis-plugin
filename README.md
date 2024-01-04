@@ -10,7 +10,7 @@ Este plugin permite descargar y cargar los conjuntos de datos de la [Plataforma 
 
 # Descarga
 
-Puedes descargar la última versión estable [aquí](https://plugins.qgis.org/plugins/pdd-qgis-plugin/version/1.1.1/download/). Otras versiones de desarrollo están publicadas en la sección ```Releases```.
+Puedes descargar la última versión estable [aquí](https://plugins.qgis.org/plugins/pdd-qgis-plugin/version/1.1.2/download/). Otras versiones de desarrollo están publicadas en la sección ```Releases```.
 
 # Instalación
 
