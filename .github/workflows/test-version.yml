@@ -24,4 +24,4 @@ jobs:
       - name: Check version in README.md
         run: |
           inREADME=$(grep "\- \*\*Version\*\*: ${{ steps.vars.outputs.tag }}" README.md | wc -l)
-          echo $inREADME          
+          if [ "$inREADME" = "0" ]; then exit 1; fi
