@@ -313,6 +313,8 @@ class PDDQgisPlugin:
         dataset_id = params.get('dataset_id')
         fmt = params.get('fmt')
         element_id = params.get('element_id')
+
+        params['source'] = 'qgis'
         
         response = requests.get(self.itrendApi, params=params, headers=self.headers)
         body = response.json()
